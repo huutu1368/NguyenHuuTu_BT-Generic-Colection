@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+class Bai7
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Nguyen Huu Tu // 2415053122346");
+        List<int> list7 = new List<int>();
+        Console.WriteLine("Nhap so luong phan tu:");
+        int.TryParse(Console.ReadLine(), out var n);
+        if (n <= 0)
+        {
+            Console.WriteLine("Danh sach rong");
+            return;
+        }
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"Nhap phan tu thu {i + 1}");
+            int.TryParse(Console.ReadLine(), out var pt);
+            list7.Add(pt);
+        }
+        Console.Write("Danh sach phan tu truoc sap xep:");
+        foreach (var pt in list7)
+        {
+            Console.Write($"{pt} ");
+        }
+        Console.Write("\n");
+        list7.Sort();
+        Console.Write("Danh sach phan tu sau sap xep (tang dan):");
+        foreach (var pt in list7)
+        {
+            Console.Write($"{pt} ");
+        }
+    }
+}
